@@ -25,26 +25,19 @@ module.exports =
 
     findSuggestionsForWord: (keywords, prefix) ->
       return [] unless keywords? and prefix?
-
       results = fuzzaldrin.filter(keywords, prefix, key: 'name')
-
       suggestions = for result in results
         suggestion =
           word: result.name
           prefix: prefix
           label: result.category
-          data:
-            body: result.name
-
+          renderLabelAsHtml: true
 
 
     loadKeywords: ->
       keywords = Q.defer()
-
       fs = require 'fs-plus'
-
       packagePath = atom.packages.resolvePackagePath('autocomplete-glsl')
-
       fs ?= require 'fs-plus'
       fs.readFile("#{packagePath}/data/glsl430-mini.json", 'utf8', ((err, data) ->
         throw err if err?
@@ -52,9 +45,7 @@ module.exports =
         for k in JSON.parse(data)
           console.debug "\"#{k.name}\" has no category!" if not k.category
           tmpKeywords.push(new Keyword(k))
-
         keywords.resolve(tmpKeywords)
         )
       )
-
       keywords.promise

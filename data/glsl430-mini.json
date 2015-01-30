@@ -6380,10 +6380,62 @@
 	},
 	{
 	  "name": "void",
-	  "category": "type"
+	  "category": "qualifier"
 	},
 	{
 	  "name": "while",
 	  "category": "statement"
+	},
+	{
+		"name": "bvec2",
+		"category": "type"
+	},
+	{
+		"name": "bvec3",
+		"category": "type"
+	},
+	{
+		"name": "bvec4",
+		"category": "type"
+	},
+	{
+		"name": "ivec2",
+		"category": "type"
+	},
+	{
+		"name": "ivec3",
+		"category": "type"
+	},
+	{
+		"name": "ivec4",
+		"category": "type"
+	},
+	{
+		"name": "uvec2",
+		"category": "type"
+	},
+	{
+		"name": "uvec3",
+		"category": "type"
+	},
+	{
+		"name": "uvec4",
+		"category": "type"
+	},
+	{
+		"name": "dvec2",
+		"category": "type"
+	},
+	{
+		"name": "dvec3",
+		"category": "type"
+	},
+	{
+		"name": "dvec4",
+		"category": "type"
+	},
+	{
+		"name": "struct",
+		"category": "qualifier"
 	}
 ]
