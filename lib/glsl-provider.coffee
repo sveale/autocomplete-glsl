@@ -28,10 +28,9 @@ module.exports =
       results = fuzzaldrin.filter(keywords, prefix, key: 'name')
       suggestions = for result in results
         suggestion =
-          word: result.name
+          word: result.word
           prefix: prefix
           label: result.category
-          renderLabelAsHtml: true
 
 
     loadKeywords: ->
@@ -42,9 +41,19 @@ module.exports =
       fs.readFile("#{packagePath}/data/glsl430-mini.json", 'utf8', ((err, data) ->
         throw err if err?
         tmpKeywords = []
-        for k in JSON.parse(data)
-          console.debug "\"#{k.name}\" has no category!" if not k.category
-          tmpKeywords.push(new Keyword(k))
+
+        for item in JSON.parse(data)
+          console.debug "\"#{item.name}\" has no category!" if not item.category
+          keyword = new Keyword(item)
+
+          if keyword.category is "function"
+            for overload in keyword.overloads
+              word = "#{overload.returnValue} #{keyword.name}(#{overload.parameters})"
+              exKeyword = new Keyword({word: word, name: keyword.name, category: keyword.category})
+              tmpKeywords.push(exKeyword)
+          else
+            keyword.word = keyword.name
+            tmpKeywords.push(keyword)
         keywords.resolve(tmpKeywords)
         )
       )
