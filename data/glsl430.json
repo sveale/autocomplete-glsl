@@ -1,0 +1,6301 @@
+{
+	"glsl430": {
+		"categories": [
+			"preprocessor",
+			"function",
+			"type",
+			"qualifier",
+			"statement"
+		],
+		"keywords": [
+			{
+			  "name": "#define",
+			  "category": "preprocessor"
+			},
+			{
+			  "name": "#elif",
+			  "category": "preprocessor"
+			},
+			{
+			  "name": "#else",
+			  "category": "preprocessor"
+			},
+			{
+			  "name": "#endif",
+			  "category": "preprocessor"
+			},
+			{
+			  "name": "#extension",
+			  "category": "preprocessor"
+			},
+			{
+			  "name": "#if",
+			  "category": "preprocessor"
+			},
+			{
+			  "name": "#ifdef",
+			  "category": "preprocessor"
+			},
+			{
+			  "name": "#ifndef",
+			  "category": "preprocessor"
+			},
+			{
+			  "name": "#include",
+			  "category": "preprocessor"
+			},
+			{
+			  "name": "#require",
+			  "category": "preprocessor"
+			},
+			{
+			  "name": "#undef",
+			  "category": "preprocessor"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType"
+			  },
+			  "name": "abs",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/-] Returns the angle whose trigonometric cosine is x, in the range [-PI/2, PI/2] for the domain [-1, 1]"
+			  },
+			  "name": "acos",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.30/-] Returns the angle whose hyperbolic cosine is x, in the range [0, PI] for the domain [-1, 1]"
+			  },
+			  "name": "acosh",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "bvec v"
+			    },
+			    "returnValue": "bool",
+			    "description": "[1.10] Returns true if all elements in the boolean vector v are true, false otherwise"
+			  },
+			  "name": "all",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "bvec v"
+			    },
+			    "returnValue": "bool",
+			    "description": "[1.10] Returns true if any element in the boolean vector v is true, false otherwise"
+			  },
+			  "name": "any",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/-] Returns the angle whose trigonometric sine is x, in the range [-PI/2, PI/2] for the domain [-1, 1]"
+			  },
+			  "name": "asin",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.30/-] Returns the angle whose hyperbolic sine is x, in the range [-PI/2, PI/2] for the domain [-1, 1]"
+			  },
+			  "name": "asinh",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": {
+			        "name": "genType XoverY"
+			      },
+			      "returnValue": "genType",
+			      "description": "[1.10/-] Returns the angle whose trigonometric arctangent is XoverY where XoverY = y/x, in the range [-PI/2, PI/2]"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "genType y"
+			        },
+			        {
+			          "name": "genType x"
+			        }
+			      ],
+			      "returnValue": "genType",
+			      "description": "[1.10/-] Returns the angle whose trigonometric tangent is y/x, in the range [-PI/2, PI/2]"
+			    }
+			  ],
+			  "name": "atan",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/-] Returns the angle whose hyperbolic tangent is x"
+			  },
+			  "name": "atanh",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "int/uint mem"
+			      },
+			      {
+			        "name": "int/uint data"
+			      }
+			    ],
+			    "returnValue": "int/uint",
+			    "description": "[4.30] Performs an atomic addition of data to mem; returns the original mem from before the addition"
+			  },
+			  "name": "atomicAdd",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "inout uint mem"
+			      },
+			      {
+			        "name": "uint data"
+			      }
+			    ],
+			    "returnValue": "int/uint",
+			    "description": "[4.30] Performs an atomic logical AND of data and mem; returns the original mem from before the addition"
+			  },
+			  "name": "atomicAnd",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "int/uint mem"
+			      },
+			      {
+			        "name": "int/uint comp"
+			      },
+			      {
+			        "name": "int/uint data"
+			      }
+			    ],
+			    "returnValue": "int/uint",
+			    "description": "[4.30] Performs an atomic comparison of data and comp; if equal, data is written to mem"
+			  },
+			  "name": "atomicCompSwap",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "atomic_uint c"
+			    },
+			    "returnValue": "uint",
+			    "description": "[4.30] Returns the value of atomic counter c"
+			  },
+			  "name": "atomicCounter",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "atomic_uint c"
+			    },
+			    "returnValue": "uint",
+			    "description": "[4.30] Decrements atomic counter c and returns its new value"
+			  },
+			  "name": "atomicCounterDecrement",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "atomic_uint c"
+			    },
+			    "returnValue": "uint",
+			    "description": "[4.30] Increments atomic counter c and returns its new value"
+			  },
+			  "name": "atomicCounterIncrement",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "inout int mem"
+			      },
+			      {
+			        "name": "int data"
+			      }
+			    ],
+			    "returnValue": "int",
+			    "description": "[4.30] Atomically exchanges the contents of data and mem; returns original contents of mem"
+			  },
+			  "name": "atomicExchange",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "inout int/uint mem"
+			      },
+			      {
+			        "name": "int/uint data"
+			      }
+			    ],
+			    "returnValue": "int/uint",
+			    "description": "[4.30] Atomically compares contents of mem and data; writes the maximum value to mem and returns its prior value"
+			  },
+			  "name": "atomicMax",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "inout int/uint mem"
+			      },
+			      {
+			        "name": "int/uint data"
+			      }
+			    ],
+			    "returnValue": "int/uint",
+			    "description": "[4.30] Atomically compares contents of mem and data; writes the minimum value to mem and returns its prior value"
+			  },
+			  "name": "atomicMin",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "inout int/uint mem"
+			      },
+			      {
+			        "name": "int/uint data"
+			      }
+			    ],
+			    "returnValue": "int/uint",
+			    "description": "[4.30] Performs an atomic logical OR of data and mem; writes the result to mem and returns original mem"
+			  },
+			  "name": "atomicOr",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "inout int/uint mem"
+			      },
+			      {
+			        "name": "int/uint data"
+			      }
+			    ],
+			    "returnValue": "int/uint",
+			    "description": "[4.30] Performs an atomic logical XOR of data and mem; writes the result to mem and returns original mem"
+			  },
+			  "name": "atomiXor",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "returnValue": "void",
+			    "description": "TESSELLATION CONTROL and COMPUTE SHADERS [4.00] Provides a partially defined order of execution between shader invocations"
+			  },
+			  "name": "barrier",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genIType/genUType value"
+			    },
+			    "returnValue": "genIType",
+			    "description": "[4.00] Returns the number of set bits in value"
+			  },
+			  "name": "bitCount",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genIType/genUType value"
+			      },
+			      {
+			        "name": "int offset"
+			      },
+			      {
+			        "name": "int bits"
+			      }
+			    ],
+			    "returnValue": "genIType/genUType",
+			    "description": "[4.00] Extracts bits [offset; offset + bits + 1] from value and returns them in the LSB of the result"
+			  },
+			  "name": "bitfieldExtract",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genIType/genUType base"
+			      },
+			      {
+			        "name": "genIType/genUType insert"
+			      },
+			      {
+			        "name": "int offset"
+			      },
+			      {
+			        "name": "int nbits"
+			      }
+			    ],
+			    "returnValue": "genIType/genUType",
+			    "description": "[4.00] Copies nbits bits from insert (starting at 0) into base starting at offset"
+			  },
+			  "name": "bitfieldInsert",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genIType/genUType value"
+			    },
+			    "returnValue": "genIType/genUType",
+			    "description": "[4.00] Returns the bitwise reverse of value"
+			  },
+			  "name": "bitfieldReverse",
+			  "category": "function"
+			},
+			{
+			  "name": "bool",
+			  "category": "type"
+			},
+			{
+			  "name": "break",
+			  "category": "statement"
+			},
+			{
+			  "name": "case",
+			  "category": "statement"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/4.00] Returns the nearest integer to x that is greater than or equal to it"
+			  },
+			  "name": "ceil",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType x"
+			      },
+			      {
+			        "name": "float/genType min"
+			      },
+			      {
+			        "name": "float/genType max"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.10/4.00, int/uint: 1.30] Constrains x to the range [min, max]"
+			  },
+			  "name": "clamp",
+			  "category": "function"
+			},
+			{
+			  "name": "class",
+			  "category": "qualifier"
+			},
+			{
+			  "name": "const",
+			  "category": "qualifier"
+			},
+			{
+			  "name": "continue",
+			  "category": "statement"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/-] Returns the trigonometric cosine of x in the range [-1, 1]"
+			  },
+			  "name": "cos",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/-] Returns the hyperbolic cosine of x"
+			  },
+			  "name": "cosh",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "vec3 a"
+			      },
+			      {
+			        "name": "vec3 b"
+			      }
+			    ],
+			    "returnValue": "vec3",
+			    "description": "[1.10/4.00] Returns the cross product of vectors a and b"
+			  },
+			  "name": "cross",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/-] Converts a quantity in radians to degrees"
+			  },
+			  "name": "degrees",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "mat m"
+			    },
+			    "returnValue": "float",
+			    "description": "[1.50/4.00] Returns the determinant of matrix m"
+			  },
+			  "name": "determinant",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType p"
+			    },
+			    "returnValue": "genType",
+			    "description": "FRAGMENT [1.10] Return the partial derivative of an argument with respect to x"
+			  },
+			  "name": "dFdx",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType p"
+			    },
+			    "returnValue": "genType",
+			    "description": "FRAGMENT [1.10] Return the partial derivative of an argument with respect to y"
+			  },
+			  "name": "dFdy",
+			  "category": "function"
+			},
+			{
+			  "name": "discard",
+			  "category": "statement"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType a"
+			      },
+			      {
+			        "name": "genType b"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.10/4.00] Returns the distance between points a and b"
+			  },
+			  "name": "distance",
+			  "category": "function"
+			},
+			{
+			  "name": "do",
+			  "category": "statement"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType a"
+			      },
+			      {
+			        "name": "genType b"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.10/4.00] Returns the dot product of vectors a and b"
+			  },
+			  "name": "dot",
+			  "category": "function"
+			},
+			{
+			  "name": "else",
+			  "category": "statement"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "int stream"
+			    },
+			    "returnValue": "void",
+			    "description": "GEOMETRY SHADER [4.00] Emits the output variables to the output primitive on stream"
+			  },
+			  "name": "EmitStreamVertex",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "returnValue": "void",
+			    "description": "GEOMETRY SHADER [1.50] Emits the output variables to the output primitive (on the first stream)"
+			  },
+			  "name": "EmitVertex",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "returnValue": "void",
+			    "description": "GEOMETRY SHADER [1.50] Completes the current output primitive (on the first stream) and starts a new one"
+			  },
+			  "name": "EndPrimitive",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "int stream"
+			    },
+			    "returnValue": "void",
+			    "description": "GEOMETRY SHADER [4.00] Completes the current output primitive on stream and starts a new one"
+			  },
+			  "name": "EndStreamPrimitive",
+			  "category": "function"
+			},
+			{
+			  "name": "enable",
+			  "category": "qualifier"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "ivec/uvec/bvec v"
+			    },
+			    "returnValue": "bvec",
+			    "description": "[1.10] Returns a boolean vector of component-wise equality comparison results"
+			  },
+			  "name": "equal",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/-] Returns the natural exponent of x"
+			  },
+			  "name": "exp",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/-] Returns 2 to the power of x"
+			  },
+			  "name": "exp2",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType N"
+			      },
+			      {
+			        "name": "genType I"
+			      },
+			      {
+			        "name": "genType R"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.10/4.00] Returns N if dot(R, I) is less than 0, -N otherwise"
+			  },
+			  "name": "faceforward",
+			  "category": "function"
+			},
+			{
+			  "name": "false"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genIType/genUType v"
+			    },
+			    "returnValue": "genIType/genUType",
+			    "description": "[4.00] Finds the index of the first set LSB in v; returns -1 if no v is 0"
+			  },
+			  "name": "findLSB",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genIType/genUType v"
+			    },
+			    "returnValue": "genIType/genUType",
+			    "description": "[4.00] Finds the index of the first set MSB in v; returns -1 if no v is 0"
+			  },
+			  "name": "findMSB",
+			  "category": "function"
+			},
+			{
+			  "name": "float"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType v"
+			    },
+			    "returnValue": "genIType",
+			    "description": "[3.30] Returns v's floating-point bit representation as a signed integer"
+			  },
+			  "name": "floatBitsToInt",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType v"
+			    },
+			    "returnValue": "genUType",
+			    "description": "[3.30] Returns v's floating-point bit representation as an unsigned integer"
+			  },
+			  "name": "floatBitsToUint",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/4.00] Returns the nearest integer to x that is less than or equal to it"
+			  },
+			  "name": "floor",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType a"
+			      },
+			      {
+			        "name": "genType b"
+			      },
+			      {
+			        "name": "genType c"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.10/4.00] Performs a fused multiply-add operation: a * b + c"
+			  },
+			  "name": "fma",
+			  "category": "function"
+			},
+			{
+			  "name": "for"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/4.00] Returns the fractional part of x"
+			  },
+			  "name": "fract",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType x"
+			      },
+			      {
+			        "name": "out genType exp"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[4.00/4.00] Returns a floating-point significand in range [0.5; 1) and exponent exp such that: x = significand * 2^exp"
+			  },
+			  "name": "frexp",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "VERTEX (deprecated) [1.10 to 1.30] Returns the current vertex transformed by the modelview projection matrix"
+			  },
+			  "name": "ftransform",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType v"
+			    },
+			    "returnValue": "genType",
+			    "description": "FRAGMENT [1.10] Return the sum of the absolute derivatives in x and y of v: abs(dFdx(v)) + abs(dFdy(v))"
+			  },
+			  "name": "fwidth",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "vec3 clrMatDiffuse"
+			      },
+			      {
+			        "name": "vec3 clrMatSpecular"
+			      },
+			      {
+			        "name": "vec3 clrMatEmissive"
+			      }
+			    ],
+			    "returnValue": "vec3",
+			    "description": "Blinn-Phong BRDF"
+			  },
+			  "name": "gdBRDFBlinnPhong",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "vec3 clrMatDiffuse"
+			      },
+			      {
+			        "name": "vec3 clrMatSpecular"
+			      },
+			      {
+			        "name": "vec3 clrMatEmissive"
+			      }
+			    ],
+			    "returnValue": "vec3",
+			    "description": "Minnaert BRDF"
+			  },
+			  "name": "gdBRDFMinnaert",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "vec3 clrMatDiffuse"
+			      },
+			      {
+			        "name": "vec3 clrMatSpecular"
+			      },
+			      {
+			        "name": "vec3 clrMatEmissive"
+			      }
+			    ],
+			    "returnValue": "vec3",
+			    "description": "Classic Phong BRDF"
+			  },
+			  "name": "gdBRDFPhong",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "vec3 clrMatDiffuse"
+			      },
+			      {
+			        "name": "vec3 clrMatSpecular"
+			      },
+			      {
+			        "name": "vec3 clrMatEmissive"
+			      }
+			    ],
+			    "returnValue": "vec3",
+			    "description": "Simple pass-thru BRDF"
+			  },
+			  "name": "gdBRDFSimple",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "vec3 clrMatDiffuse"
+			      },
+			      {
+			        "name": "vec3 clrMatSpecular"
+			      },
+			      {
+			        "name": "vec3 clrMatEmissive"
+			      }
+			    ],
+			    "returnValue": "vec3",
+			    "description": "Directional Ward BRDF"
+			  },
+			  "name": "gdBRDFWardAnisotropic",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "vec3 clrMatDiffuse"
+			      },
+			      {
+			        "name": "vec3 clrMatSpecular"
+			      },
+			      {
+			        "name": "vec3 clrMatEmissive"
+			      }
+			    ],
+			    "returnValue": "vec3",
+			    "description": "Non-directional Ward BRDF"
+			  },
+			  "name": "gdBRDFWardIsotropic",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "vec4 vPosition"
+			    },
+			    "returnValue": "float",
+			    "description": "Extracts linearized depth in range [0, 1] from the z and w components of vPosition"
+			  },
+			  "name": "gdLinearizeDepthFromPosition",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "vec3 v"
+			    },
+			    "returnValue": "vec4",
+			    "description": "Performs linear projection on v"
+			  },
+			  "name": "gdProjectLinear",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "vec3 v"
+			      },
+			      {
+			        "name": "float fHemisphere"
+			      }
+			    ],
+			    "returnValue": "vec4",
+			    "description": "Performs paraboloid projection on v; fHemisphere is either 1 or -1"
+			  },
+			  "name": "gdProjectParaboloid",
+			  "category": "function"
+			},
+			{
+			  "name": "gd_fltFarPlane"
+			},
+			{
+			  "name": "gd_fltNearPlane"
+			},
+			{
+			  "name": "gd_InBitangent"
+			},
+			{
+			  "name": "gd_InColor"
+			},
+			{
+			  "name": "gd_InTangent"
+			},
+			{
+			  "name": "gd_InUVDetail"
+			},
+			{
+			  "name": "gd_InUVDiffuse"
+			},
+			{
+			  "name": "gd_InUVLightMap"
+			},
+			{
+			  "name": "gd_InVertex"
+			},
+			{
+			  "name": "gd_InVertexColor"
+			},
+			{
+			  "name": "gd_matInverseModel"
+			},
+			{
+			  "name": "gd_matInverseModelView"
+			},
+			{
+			  "name": "gd_matModel"
+			},
+			{
+			  "name": "gd_matModelView"
+			},
+			{
+			  "name": "gd_matModelViewProjection"
+			},
+			{
+			  "name": "gd_matProjection"
+			},
+			{
+			  "name": "gd_matView"
+			},
+			{
+			  "name": "gd_matViewProjection"
+			},
+			{
+			  "name": "gd_OutFragDepth"
+			},
+			{
+			  "name": "gd_OutFragDiffuse"
+			},
+			{
+			  "name": "gd_OutFragMask"
+			},
+			{
+			  "name": "gd_OutFragNormal"
+			},
+			{
+			  "name": "gd_OutVertex"
+			},
+			{
+			  "name": "gl_BackColor"
+			},
+			{
+			  "name": "gl_BackSecondaryColor"
+			},
+			{
+			  "name": "gl_ClipDistance"
+			},
+			{
+			  "name": "gl_ClipVertex"
+			},
+			{
+			  "name": "gl_Color"
+			},
+			{
+			  "name": "gl_FogCoord"
+			},
+			{
+			  "name": "gl_FogFragCoord"
+			},
+			{
+			  "name": "gl_FragColor"
+			},
+			{
+			  "name": "gl_FragCoord"
+			},
+			{
+			  "name": "gl_FragData"
+			},
+			{
+			  "name": "gl_FragDepth"
+			},
+			{
+			  "name": "gl_FrontColor"
+			},
+			{
+			  "name": "gl_FrontFacing"
+			},
+			{
+			  "name": "gl_FrontSecondaryColor"
+			},
+			{
+			  "name": "gl_GlobalInvocationID"
+			},
+			{
+			  "name": "gl_InstanceID"
+			},
+			{
+			  "name": "gl_InvocationID"
+			},
+			{
+			  "name": "gl_Layer"
+			},
+			{
+			  "name": "gl_LocalInvocationID"
+			},
+			{
+			  "name": "gl_LocalInvocationIndex"
+			},
+			{
+			  "name": "gl_MultiTexCoord"
+			},
+			{
+			  "name": "gl_MultiTexCoord0"
+			},
+			{
+			  "name": "gl_MultiTexCoord1"
+			},
+			{
+			  "name": "gl_MultiTexCoord2"
+			},
+			{
+			  "name": "gl_MultiTexCoord3"
+			},
+			{
+			  "name": "gl_MultiTexCoord4"
+			},
+			{
+			  "name": "gl_MultiTexCoord5"
+			},
+			{
+			  "name": "gl_MultiTexCoord6"
+			},
+			{
+			  "name": "gl_MultiTexCoord7"
+			},
+			{
+			  "name": "gl_Normal"
+			},
+			{
+			  "name": "gl_NumSamples"
+			},
+			{
+			  "name": "gl_NumWorkGroups"
+			},
+			{
+			  "name": "gl_PatchVerticesIn"
+			},
+			{
+			  "name": "gl_PerVertex"
+			},
+			{
+			  "name": "gl_PointCoord"
+			},
+			{
+			  "name": "gl_PointSize"
+			},
+			{
+			  "name": "gl_Position"
+			},
+			{
+			  "name": "gl_PrimitiveID"
+			},
+			{
+			  "name": "gl_PrimitiveIDIn"
+			},
+			{
+			  "name": "gl_SampleID"
+			},
+			{
+			  "name": "gl_SampleMask"
+			},
+			{
+			  "name": "gl_SampleMaskIn"
+			},
+			{
+			  "name": "gl_SamplePosition"
+			},
+			{
+			  "name": "gl_SecondaryColor"
+			},
+			{
+			  "name": "gl_TessCoord"
+			},
+			{
+			  "name": "gl_TessLevelInner"
+			},
+			{
+			  "name": "gl_TessLevelOuter"
+			},
+			{
+			  "name": "gl_TexCoord"
+			},
+			{
+			  "name": "gl_Vertex"
+			},
+			{
+			  "name": "gl_VertexID"
+			},
+			{
+			  "name": "gl_ViewportIndex"
+			},
+			{
+			  "name": "gl_WorkGroupID"
+			},
+			{
+			  "name": "gl_WorkGroupSize"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "vec/ivec/uvec x"
+			      },
+			      {
+			        "name": "vec/ivec/uvec y"
+			      }
+			    ],
+			    "returnValue": "bvec",
+			    "description": "[vec, ivec: 1.00, uvec: 1.30] Returns a boolean component-wise comparison of x and y"
+			  },
+			  "name": "greaterThan",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "vec/ivec/uvec x"
+			      },
+			      {
+			        "name": "vec/ivec/uvec y"
+			      }
+			    ],
+			    "returnValue": "bvec",
+			    "description": "[vec, ivec: 1.00, uvec: 1.30] Returns a boolean component-wise comparison of x and y"
+			  },
+			  "name": "greaterThanEqual",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "returnValue": "void",
+			    "description": "[4.30] Waits on the completion of all memory accesses performed by an a compute shader in the same work group"
+			  },
+			  "name": "groupMemoryBarrier",
+			  "category": "function"
+			},
+			{
+			  "name": "if"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Adds the value of data to the contents of the texel at coordinate/index P in image bound to imgunit; returns the original value"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int nsample"
+			        },
+			        {
+			          "name": "int data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Adds the value of data to the contents of the texel at coordinate/index P in multisample buffer nsample in image bound to imgunit; returns the original value"
+			    }
+			  ],
+			  "name": "imageAtomicAdd",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Stores data AND texel at coordinate/index P in image bound to imgunit; returns the original value"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int nsample"
+			        },
+			        {
+			          "name": "int data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Stores data AND texel at coordinate/index P in multisample buffer nsample in image bound to imgunit; returns the original value"
+			    }
+			  ],
+			  "name": "imageAtomicAnd",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int/uint compare"
+			        },
+			        {
+			          "name": "int/uint data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Stores data at coordinate/index P in image bound to imgunit if texel == compare; returns the original value"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int sample"
+			        },
+			        {
+			          "name": "int/uint compare"
+			        },
+			        {
+			          "name": "int/uint data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Stores data at coordinate/index P in multisample buffer nsample in image bound to imgunit if texel == compare; returns the original value"
+			    }
+			  ],
+			  "name": "imageAtomicCompSwap",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int/uint compare"
+			        },
+			        {
+			          "name": "int/uint data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Stores data at coordinate/index P in image bound to imgunit; returns the original value"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int nsample"
+			        },
+			        {
+			          "name": "int/uint compare"
+			        },
+			        {
+			          "name": "int/uint data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Stores data at coordinate/index P in multisample buffer nsample in image bound to imgunit; returns the original value"
+			    }
+			  ],
+			  "name": "imageAtomicExchange",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int/uint compare"
+			        },
+			        {
+			          "name": "int/uint data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Stores max(data, texel) at coordinate/index P in image bound to imgunit; returns the original value"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int nsample"
+			        },
+			        {
+			          "name": "int/uint compare"
+			        },
+			        {
+			          "name": "int/uint data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Stores max(data, texel) at coordinate/index P in multisample buffer nsample in image bound to imgunit; returns the original value"
+			    }
+			  ],
+			  "name": "imageAtomicMax",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int/uint compare"
+			        },
+			        {
+			          "name": "int/uint data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Stores min(data, texel) at coordinate/index P in image bound to imgunit; returns the original value"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int nsample"
+			        },
+			        {
+			          "name": "int/uint compare"
+			        },
+			        {
+			          "name": "int/uint data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Stores min(data, texel) at coordinate/index P in multisample buffer nsample in image bound to imgunit; returns the original value"
+			    }
+			  ],
+			  "name": "imageAtomicMin",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int/uint compare"
+			        },
+			        {
+			          "name": "int/uint data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Stores data OR texel at coordinate/index P in image bound to imgunit; returns the original value"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int nsample"
+			        },
+			        {
+			          "name": "int/uint compare"
+			        },
+			        {
+			          "name": "int/uint data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Stores data OR texel at coordinate/index P in multisample buffer nsample in image bound to imgunit; returns the original value"
+			    }
+			  ],
+			  "name": "imageAtomicOr",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int/uint compare"
+			        },
+			        {
+			          "name": "int/uint data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Stores data XOR texel at coordinate/index P in image bound to imgunit; returns the original value"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gimage imgunit"
+			        },
+			        {
+			          "name": "int/ivec2/ivec3 P"
+			        },
+			        {
+			          "name": "int nsample"
+			        },
+			        {
+			          "name": "int/uint compare"
+			        },
+			        {
+			          "name": "int/uint data"
+			        }
+			      ],
+			      "returnValue": "int/uint",
+			      "description": "[4.20] Stores data XOR texel at coordinate/index P in multisample buffer nsample in image bound to imgunit; returns the original value"
+			    }
+			  ],
+			  "name": "imageAtomicXor",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "image img"
+			      },
+			      {
+			        "name": "int/ivec2/ivec3 P"
+			      }
+			    ],
+			    "returnValue": "gvec4",
+			    "description": "[4.20] Loads a single sample from img at coordinate P"
+			  },
+			  "name": "imageLoad",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "image img"
+			    },
+			    "returnValue": "int/ivec2/ivec3",
+			    "description": "[4.30] Returns the dimensions of img"
+			  },
+			  "name": "imageSize",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "image img"
+			      },
+			      {
+			        "name": "int/ivec2/ivec3 P"
+			      },
+			      {
+			        "name": "gvec4 sample"
+			      }
+			    ],
+			    "returnValue": "void",
+			    "description": "[4.20] Stores sample in img at coordinate P"
+			  },
+			  "name": "imageStore",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genIType x"
+			      },
+			      {
+			        "name": "genIType y"
+			      },
+			      {
+			        "name": "out genIType msb"
+			      },
+			      {
+			        "name": "out genIType lsb"
+			      }
+			    ],
+			    "returnValue": "void",
+			    "description": "[4.00] Multiplies 32-bit x and y into a 64-bit result; returns it in msb and lsb"
+			  },
+			  "name": "imulExtended",
+			  "category": "function"
+			},
+			{
+			  "name": "in"
+			},
+			{
+			  "name": "int"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genIType v"
+			    },
+			    "returnValue": "genType",
+			    "description": "[3.30] Returns v's signed integer bit representation as a float"
+			  },
+			  "name": "intBitsToFloat",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "float/vec2/vec3/vec4 interpolant"
+			    },
+			    "returnValue": "float/vec2/vec3/vec4",
+			    "description": "[4.00] Returns the value at interpolant sampled at a location inside both the pixel and the current primitive"
+			  },
+			  "name": "interpolateAtCentroid",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "float/vec2/vec3/vec4 interpolant"
+			      },
+			      {
+			        "name": "vec2 offset"
+			      }
+			    ],
+			    "returnValue": "float/vec2/vec3/vec4",
+			    "description": "[4.00] Returns the value at interpolant sampled at offset from the center of the pixel"
+			  },
+			  "name": "interpolateAtOffset",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "float/vec2/vec3/vec4 interpolant"
+			      },
+			      {
+			        "name": "int msample"
+			      }
+			    ],
+			    "returnValue": "float/vec2/vec3/vec4",
+			    "description": "[4.00] Returns the value at interpolant in multisample buffer msample"
+			  },
+			  "name": "interpolateAtSample",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "mat m"
+			    },
+			    "returnValue": "mat",
+			    "description": "[1.40/4.00] Returns the inverse of matrix m"
+			  },
+			  "name": "inverse",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType v"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.30/4.00] Returns the inverse of the square root of v"
+			  },
+			  "name": "inversesqrt",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType v"
+			    },
+			    "returnValue": "genBType",
+			    "description": "[1.10/4.00] Returns component-wise true/false if v is (either positive or negative) infinity"
+			  },
+			  "name": "isinf",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType v"
+			    },
+			    "returnValue": "genBType",
+			    "description": "[1.30/4.00] Returns component-wise true/false if v is (either positive or negative floating point) nan"
+			  },
+			  "name": "isnan",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType x"
+			      },
+			      {
+			        "name": "genIType exp"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[4.00/4.00] Assembles a floating-point number from value x and exponet exp: x * 2^exp"
+			  },
+			  "name": "ldexp",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType v"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/4.00] Returns the length of vector v"
+			  },
+			  "name": "length",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "vec/ivec/uvec x"
+			      },
+			      {
+			        "name": "vec/ivec/uvec y"
+			      }
+			    ],
+			    "returnValue": "bvec",
+			    "description": "[vec, ivec: 1.00, uvec: 1.30] Returns a boolean component-wise comparison of x and y"
+			  },
+			  "name": "lessThan",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "vec/ivec/uvec x"
+			      },
+			      {
+			        "name": "vec/ivec/uvec y"
+			      }
+			    ],
+			    "returnValue": "bvec",
+			    "description": "[vec, ivec: 1.00, uvec: 1.30] Returns a boolean component-wise comparison of x and y"
+			  },
+			  "name": "lessThanEqual",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/-] Returns the natural logarithm of x"
+			  },
+			  "name": "log",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/-] Returns the base 2 logarithm of x"
+			  },
+			  "name": "log2",
+			  "category": "function"
+			},
+			{
+			  "name": "mat2"
+			},
+			{
+			  "name": "mat3"
+			},
+			{
+			  "name": "mat4"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "mat a"
+			      },
+			      {
+			        "name": "mat b"
+			      }
+			    ],
+			    "returnValue": "mat",
+			    "description": "[1.10/4.00] Performs a component-wise multiplication of matrices a and b"
+			  },
+			  "name": "matrixCompMult"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType/genIType/genUType a"
+			      },
+			      {
+			        "name": "[float/int/uint]|genType/genIType/genUType b"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.10, int/uint: 1.30, double: 4.00] Returns the greater of a and b"
+			  },
+			  "name": "max"
+			},
+			{
+			  "overload": {
+			    "returnValue": "void",
+			    "description": "[4.00] Waits on the completion of all memory accesses from image or atomic variables"
+			  },
+			  "name": "memoryBarrier",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "returnValue": "void",
+			    "description": "[4.30] Waits on the completion of all memory accesses to atomic counters"
+			  },
+			  "name": "memoryBarrierAtomicCounter",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "returnValue": "void",
+			    "description": "[4.30] Waits on the completion of all memory accesses to buffers"
+			  },
+			  "name": "memoryBarrierBuffer",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "returnValue": "void",
+			    "description": "[4.30] Waits on the completion of all memory accesses images"
+			  },
+			  "name": "memoryBarrierImage",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "returnValue": "void",
+			    "description": "[4.30] Waits on the completion of all memory accesses to shared variables"
+			  },
+			  "name": "memoryBarrierShared",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType/genIType/genUType a"
+			      },
+			      {
+			        "name": "[float/int/uint]|genType/genIType/genUType b"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.10, int/uint: 1.30, double: 4.00] Returns the lesser of a and b"
+			  },
+			  "name": "min"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType a"
+			      },
+			      {
+			        "name": "genType b"
+			      },
+			      {
+			        "name": "genType/float c"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.10/4.00] Performs linear interpolation between a and b using c"
+			  },
+			  "name": "mix"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType a"
+			      },
+			      {
+			        "name": "float/genType b"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.10/4.00] Computes a modulo b: x - y * floor(x / y)"
+			  },
+			  "name": "mod"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType a"
+			      },
+			      {
+			        "name": "out genType b"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.30/4.00] Computes a modulo b; returns the fraction, the integer part is stored in b"
+			  },
+			  "name": "modf"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType v"
+			    },
+			    "returnValue": "float",
+			    "description": "[1.10] Returns a stochastic noise sample at coordinate v"
+			  },
+			  "name": "noise1",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType v"
+			    },
+			    "returnValue": "vec2",
+			    "description": "[1.10] Returns a stochastic noise sample at coordinate v"
+			  },
+			  "name": "noise2",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType v"
+			    },
+			    "returnValue": "vec3",
+			    "description": "[1.10] Returns a stochastic noise sample at coordinate v"
+			  },
+			  "name": "noise3",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType v"
+			    },
+			    "returnValue": "vec4",
+			    "description": "[1.10] Returns a stochastic noise sample at coordinate v"
+			  },
+			  "name": "noise4",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType v"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/4.00] Calculates the normalized product of v"
+			  },
+			  "name": "normalize",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "bvec v"
+			    },
+			    "returnValue": "bvec",
+			    "description": "[1.10] Logically inverts a boolean vector"
+			  },
+			  "name": "not",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "vec/ivec/uvec x"
+			      },
+			      {
+			        "name": "vec/ivec/uvec y"
+			      }
+			    ],
+			    "returnValue": "bvec",
+			    "description": "[float: 1.10, int, uint: 1.30] Returns a component-wise not-equal-to comparison of vectors x and y"
+			  },
+			  "name": "notEqual",
+			  "category": "function"
+			},
+			{
+			  "name": "out"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "vec2/vec3/vec4 C"
+			      },
+			      {
+			        "name": "vec2/vec3/vec4 R"
+			      }
+			    ],
+			    "returnValue": "matRxC",
+			    "description": "[1.20/4.00] Returns the outer product of vectors c and r (a multiplied matrix with dimensions RxC)"
+			  },
+			  "name": "outerProduct",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "uvec2 v"
+			    },
+			    "returnValue": "double",
+			    "description": "[4.00] Packs two unsigned integers stored in v into a double-precision number"
+			  },
+			  "name": "packDouble2x32",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "vec2 v"
+			    },
+			    "returnValue": "uint",
+			    "description": "[4.20] Packs two floating-point values into an unsigned integer at half precision"
+			  },
+			  "name": "packHalf2x16",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "vec2"
+			    },
+			    "returnValue": "uint",
+			    "description": "[4.20] Packs two floating-point values into an unsigned integer as 16-bit signed ints"
+			  },
+			  "name": "packSnorm2x16",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "vec4"
+			    },
+			    "returnValue": "uint",
+			    "description": "[4.10] Packs four floating-point values into an unsigned integer as 8-bit signed ints"
+			  },
+			  "name": "packSnorm4x8",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "vec2"
+			    },
+			    "returnValue": "uint",
+			    "description": "[4.10] Packs two floating-point values into an unsigned integer as 16-bit unsigned ints"
+			  },
+			  "name": "packUnorm2x16",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "vec4"
+			    },
+			    "returnValue": "uint",
+			    "description": "[4.10] Packs two floating-point values into an unsigned integer as 8-bit unsigned ints"
+			  },
+			  "name": "packUnorm4x8",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType x"
+			      },
+			      {
+			        "name": "genType y"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.10/-] Returns the value of x raised to the power of y"
+			  },
+			  "name": "pow",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/-] Convert a quantity in degrees to radians"
+			  },
+			  "name": "radians",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType I"
+			      },
+			      {
+			        "name": "genType N"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.10/4.00] Returns the reflection direction calculated as I - 2.0 * dot(N, I) * N"
+			  },
+			  "name": "reflect",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genType I"
+			      },
+			      {
+			        "name": "genType N"
+			      },
+			      {
+			        "name": "float eta"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.10/4.00] Returns the refraction vector based on ratio of indices 'eta' between an incident vector and a normal"
+			  },
+			  "name": "refract",
+			  "category": "function"
+			},
+			{
+			  "name": "return"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.30/4.00] Rounds x to the closes integer value (0.5 is implementation-specific)"
+			  },
+			  "name": "round",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.30/4.00] Rounds x to the closes even integer value"
+			  },
+			  "name": "roundEven",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.30/4.00, integer: 1.50] Returns 1 if x is greater than 0, 0 if x == 0 and -1 if x is less than 0"
+			  },
+			  "name": "sign",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType"
+			  },
+			  "name": "sin",
+			  "category": "function",
+			  "description": "[1.10/-] Returns the sine of x in the range [-1, 1]"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.30/-] Returns the hyperbolic sine of x"
+			  },
+			  "name": "sinh",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "float/genType edge0"
+			      },
+			      {
+			        "name": "float/genType edge1"
+			      },
+			      {
+			        "name": "genType x"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.30/4.00] Performs smooth Hermite interpolation between 0 and 1 when x lies between edge0 and edge1"
+			  },
+			  "name": "smoothstep",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.30/4.00] Returns the square root of x"
+			  },
+			  "name": "sqrt",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "float/genType a"
+			      },
+			      {
+			        "name": "genType b"
+			      }
+			    ],
+			    "returnValue": "genType",
+			    "description": "[1.30/-] Returns 0 if a is less than b, 1 otherwise"
+			  },
+			  "name": "step",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.10/-] Returns the trigonometric tangent of x in the range [-PI/2, PI/2]"
+			  },
+			  "name": "tan",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType x"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.30/-] Returns the hyperbolic tangent of x"
+			  },
+			  "name": "tanh",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "int P"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Fetches a single texel from sampler at pixel coordinate P with LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "ivec2 P"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Fetches a single texel from sampler at pixel coordinates P with LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "ivec3 P"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Fetches a single texel from sampler at pixel coordinates P with LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "ivec2 P"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Fetches a single texel from sampler at pixel coordinates P"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1DArray sampler"
+			        },
+			        {
+			          "name": "ivec2 P"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Fetches a single texel from sampler at pixel coordinates P with LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArray sampler"
+			        },
+			        {
+			          "name": "ivec3 P"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Fetches a single texel from sampler at pixel coordinates P with LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerBuffer sampler"
+			        },
+			        {
+			          "name": "int P"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Fetches a single element from buffer at offset P"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DMS sampler"
+			        },
+			        {
+			          "name": "ivec2 P"
+			        },
+			        {
+			          "name": "sample nsample"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.50] Fetches a single texel from sampler at pixel coordinates P at multisample level nsample"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DMSArray sampler"
+			        },
+			        {
+			          "name": "ivec3 P"
+			        },
+			        {
+			          "name": "sample nsample"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.50] Fetches a single texel from sampler at pixel coordinates P at multisample level nsample"
+			    }
+			  ],
+			  "name": "texelFetch",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "int P"
+			        },
+			        {
+			          "name": "int lod"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Fetches a single texel from sampler at pixel coordinate (P + offset) with LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "ivec2 P"
+			        },
+			        {
+			          "name": "int lod"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Fetches a single texel from sampler at pixel coordinates (P + offset) with LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "ivec3 P"
+			        },
+			        {
+			          "name": "int lod"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Fetches a single texel from sampler at pixel coordinates (P + offset) with LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "ivec2 P"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Fetches a single texel from sampler at pixel coordinates (P + offset)"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1DArray sampler"
+			        },
+			        {
+			          "name": "ivec2 P"
+			        },
+			        {
+			          "name": "int lod"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Fetches a single texel from sampler at pixel coordinates (P + offset) with LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArray sampler"
+			        },
+			        {
+			          "name": "ivec3 P"
+			        },
+			        {
+			          "name": "int lod"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Fetches a single texel from sampler at pixel coordinates (P + offset) with LOD"
+			    }
+			  ],
+			  "name": "texelFetchOffset",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "float P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCube sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "samplerCubeShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1DArray sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DRectShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.40] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCubeArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[4.00] Retrieves texels from sampler at coordinates P with optional bias"
+			    }
+			  ],
+			  "name": "texture",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1D sampler"
+			        },
+			        {
+			          "name": "float P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "isampler1D sampler"
+			        },
+			        {
+			          "name": "float P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "ivec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "usampler1D sampler"
+			        },
+			        {
+			          "name": "float P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "uvec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    }
+			  ],
+			  "name": "texture1D",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DArray sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "isampler1DArray sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "ivec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "usampler1DArray sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "uvec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    }
+			  ],
+			  "name": "texture1DArray",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "sampler1DShadow sampler"
+			      },
+			      {
+			        "name": "vec3 P"
+			      },
+			      {
+			        "name": "[float bias]"
+			      }
+			    ],
+			    "returnValue": "float",
+			    "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			  },
+			  "name": "texture1DShadow",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "isampler2D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "ivec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "usampler2D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "uvec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    }
+			  ],
+			  "name": "texture2D",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "isampler2DArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "ivec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "usampler2DArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "uvec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    }
+			  ],
+			  "name": "texture2DArray",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.40] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DRectShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.40] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "isampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "ivec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.40] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "usampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "uvec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.40] Retrieves texels from sampler at coordinates P with optional bias"
+			    }
+			  ],
+			  "name": "texture2DRect",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "sampler2DShadow sampler"
+			      },
+			      {
+			        "name": "vec3 P"
+			      },
+			      {
+			        "name": "[float bias]"
+			      }
+			    ],
+			    "returnValue": "float",
+			    "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			  },
+			  "name": "texture2DShadow",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler3D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "isampler3D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "ivec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "usampler3D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "uvec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    }
+			  ],
+			  "name": "texture3D",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "samplerCube sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "isamplerCube sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "ivec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "usamplerCube sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "uvec4",
+			      "description": "FRAGMENT (deprecated, use texture()) [??? to 1.30] Retrieves texels from sampler at coordinates P with optional bias"
+			    }
+			  ],
+			  "name": "textureCube",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "[int comp]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates P. comp is optionally the source component index [0, 3], defaulting to 0 if not specified"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[int comp]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates P. comp is optionally the source component index [0, 3], defaulting to 0 if not specified"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCube sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[int comp]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates P. comp is optionally the source component index [0, 3], defaulting to 0 if not specified"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCubeArray sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "[int comp]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates P. comp is optionally the source component index [0, 3], defaulting to 0 if not specified"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[int comp]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates P. comp is optionally the source component index [0, 3], defaulting to 0 if not specified"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float refZ"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates P. refZ is used to compare the shadow forms"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DShadowArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float refZ"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates P. refZ is used to compare the shadow forms"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCubeShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float refZ"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates P. refZ is used to compare the shadow forms"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float refZ"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates P. refZ is used to compare the shadow forms"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRectShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float refZ"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates P. refZ is used to compare the shadow forms"
+			    }
+			  ],
+			  "name": "textureGather",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        },
+			        {
+			          "name": "[int comp]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates (P + offset). comp is optionally the source component index [0, 3], defaulting to 0 if not specified"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        },
+			        {
+			          "name": "[int comp]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates (P + offset). comp is optionally the source component index [0, 3], defaulting to 0 if not specified"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        },
+			        {
+			          "name": "[int comp]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates (P + offset). comp is optionally the source component index [0, 3], defaulting to 0 if not specified"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float refZ"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates (P + offset). refZ is used to compare the shadow forms"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float refZ"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates (P + offset). refZ is used to compare the shadow forms"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRectShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float refZ"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates (P + offset). refZ is used to compare the shadow forms"
+			    }
+			  ],
+			  "name": "textureGatherOffset",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "ivec2 offsets[4]"
+			        },
+			        {
+			          "name": "[int comp]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates (P + offsets). comp is optionally the source component index [0, 3], defaulting to 0 if not specified"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "ivec2 offsets[4]"
+			        },
+			        {
+			          "name": "[int comp]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates (P + offsets). comp is optionally the source component index [0, 3], defaulting to 0 if not specified"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "ivec2 offsets[4]"
+			        },
+			        {
+			          "name": "[int comp]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates (P + offsets). comp is optionally the source component index [0, 3], defaulting to 0 if not specified"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float refZ"
+			        },
+			        {
+			          "name": "ivec2 offsets[4]"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates (P + offsets). refZ is used to compare the shadow forms"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float refZ"
+			        },
+			        {
+			          "name": "ivec2 offsets[4]"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates (P + offsets). refZ is used to compare the shadow forms"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRectShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float refZ"
+			        },
+			        {
+			          "name": "ivec2 offsets[4]"
+			        }
+			      ],
+			      "returnValue": "vec4",
+			      "description": "[4.00] Gathers four texels from sampler at coordinates (P + offsets). refZ is used to compare the shadow forms"
+			    }
+			  ],
+			  "name": "textureGatherOffsets",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "float P"
+			        },
+			        {
+			          "name": "float dPdx"
+			        },
+			        {
+			          "name": "float dPdy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float dPdx"
+			        },
+			        {
+			          "name": "float dPdy"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "vec2 dPdx"
+			        },
+			        {
+			          "name": "vec2 dPdy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "vec2 dPdx"
+			        },
+			        {
+			          "name": "vec2 dPdy"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "vec3 dPdx"
+			        },
+			        {
+			          "name": "vec3 dPdy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCube sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "vec3 dPdx"
+			        },
+			        {
+			          "name": "vec3 dPdy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "vec2 dPdx"
+			        },
+			        {
+			          "name": "vec2 dPdy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRectShadow sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "vec2 dPdx"
+			        },
+			        {
+			          "name": "vec2 dPdy"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.40] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1DArray sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float dPdx"
+			        },
+			        {
+			          "name": "float dPdy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1DArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float dPdx"
+			        },
+			        {
+			          "name": "float dPdy"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "vec2 dPdx"
+			        },
+			        {
+			          "name": "vec2 dPdy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCubeArray sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "vec3 dPdx"
+			        },
+			        {
+			          "name": "vec3 dPdy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[4.00] Performs a texture lookup with explicit gradients"
+			    }
+			  ],
+			  "name": "textureGrad",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "float P"
+			        },
+			        {
+			          "name": "float dPdx"
+			        },
+			        {
+			          "name": "float dPdy"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float dPdx"
+			        },
+			        {
+			          "name": "float dPdy"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "vec2 dPdx"
+			        },
+			        {
+			          "name": "vec2 dPdy"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "vec2 dPdx"
+			        },
+			        {
+			          "name": "vec2 dPdy"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "vec3 dPdx"
+			        },
+			        {
+			          "name": "vec3 dPdy"
+			        },
+			        {
+			          "name": "ivec3 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "vec2 dPdx"
+			        },
+			        {
+			          "name": "vec2 dPdy"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRectShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "vec2 dPdx"
+			        },
+			        {
+			          "name": "vec2 dPdy"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.40] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1DArray sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float dPdx"
+			        },
+			        {
+			          "name": "float dPdy"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1DArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float dPdx"
+			        },
+			        {
+			          "name": "float dPdy"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "vec2 dPdx"
+			        },
+			        {
+			          "name": "vec2 dPdy"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float dPdx"
+			        },
+			        {
+			          "name": "float dPdy"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    }
+			  ],
+			  "name": "textureGradOffset",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "float P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRectShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.40] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1DArray sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "samplerCubeArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[4.00] Performs a texture lookup with explicit gradients"
+			    }
+			  ],
+			  "name": "textureLod",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "float P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "ivec3 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRectShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "ivec3 offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.40] Performs a texture lookup with explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1DArray sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "samplerCubeArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "ivec3 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[4.00] Performs a texture lookup with explicit gradients and offset"
+			    }
+			  ],
+			  "name": "textureLodOffset",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "float P"
+			        },
+			        {
+			          "name": "int offset"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "int offset"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "ivec3 offset"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Performs a texture lookup with offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRectShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "ivec3 offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.40] Performs a texture lookup with offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1DArray sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "int offset"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "vec2 offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with offset"
+			    }
+			  ],
+			  "name": "textureOffset",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection (first components of P are divided by the last prior to regular lookup)"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection (first components of P are divided by the last prior to regular lookup)"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with projection (first components of P are divided by the last prior to regular lookup)"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection (first components of P are divided by the last prior to regular lookup)"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection (first components of P are divided by the last prior to regular lookup)"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with projection (first components of P are divided by the last prior to regular lookup)"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection (first components of P are divided by the last prior to regular lookup)"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Performs a texture lookup with projection (first components of P are divided by the last prior to regular lookup)"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Performs a texture lookup with projection (first components of P are divided by the last prior to regular lookup)"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRectShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.40] Performs a texture lookup with projection (first components of P are divided by the last prior to regular lookup)"
+			    }
+			  ],
+			  "name": "textureProj",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float pDx"
+			        },
+			        {
+			          "name": "float pDy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float pDx"
+			        },
+			        {
+			          "name": "float pDy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float pDx"
+			        },
+			        {
+			          "name": "float pDy"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "vec2 pDx"
+			        },
+			        {
+			          "name": "vec2 pDy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "vec2 pDx"
+			        },
+			        {
+			          "name": "vec2 pDy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "vec2 pDx"
+			        },
+			        {
+			          "name": "vec2 pDy"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "vec2 pDx"
+			        },
+			        {
+			          "name": "vec2 pDy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "vec2 pDx"
+			        },
+			        {
+			          "name": "vec2 pDy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Performs a texture lookup with projection and explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "vec2 pDx"
+			        },
+			        {
+			          "name": "vec2 pDy"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Performs a texture lookup with projection and explicit gradients"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRectShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "vec2 pDx"
+			        },
+			        {
+			          "name": "vec2 pDy"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.40] Performs a texture lookup with projection and explicit gradients"
+			    }
+			  ],
+			  "name": "textureProjGrad",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float pDx"
+			        },
+			        {
+			          "name": "float pDy"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float pDx"
+			        },
+			        {
+			          "name": "float pDy"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float pDx"
+			        },
+			        {
+			          "name": "float pDy"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "vec2 pDx"
+			        },
+			        {
+			          "name": "vec2 pDy"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "vec2 pDx"
+			        },
+			        {
+			          "name": "vec2 pDy"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "vec2 pDx"
+			        },
+			        {
+			          "name": "vec2 pDy"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "vec2 pDx"
+			        },
+			        {
+			          "name": "vec2 pDy"
+			        },
+			        {
+			          "name": "ivec3 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "vec2 pDx"
+			        },
+			        {
+			          "name": "vec2 pDy"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Performs a texture lookup with projection and explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "vec2 pDx"
+			        },
+			        {
+			          "name": "vec2 pDy"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Performs a texture lookup with projection and explicit gradients and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRectShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "vec2 pDx"
+			        },
+			        {
+			          "name": "vec2 pDy"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.40] Performs a texture lookup with projection and explicit gradients and offset"
+			    }
+			  ],
+			  "name": "textureProjGradOffset",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit LOD"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float lod"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit LOD"
+			    }
+			  ],
+			  "name": "textureProjLod",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit LOD and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit LOD and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "int offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit LOD and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit LOD and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit LOD and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit LOD and offset"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "float lod"
+			        },
+			        {
+			          "name": "ivec3 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection and explicit LOD and offset"
+			    }
+			  ],
+			  "name": "textureProjLodOffset",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        },
+			        {
+			          "name": "int offset"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection, offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "int offset"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection, offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "int offset"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with projection, offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection, offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection, offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.30] Performs a texture lookup with projection, offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "ivec3 offset"
+			        },
+			        {
+			          "name": "[float bias]"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.30] Performs a texture lookup with projection, offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Performs a texture lookup with projection, offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRect sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "gvec4",
+			      "description": "[1.40] Performs a texture lookup with projection, offset and optional bias"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DRectShadow sampler"
+			        },
+			        {
+			          "name": "vec4 P"
+			        },
+			        {
+			          "name": "ivec2 offset"
+			        }
+			      ],
+			      "returnValue": "float",
+			      "description": "[1.40] Performs a texture lookup with projection, offset and optional bias"
+			    }
+			  ],
+			  "name": "textureProjOffset",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": {
+			        "name": "gsampler1D sampler"
+			      },
+			      "returnValue": "vec2",
+			      "description": "[4.30] Returns the number of accessible mipmap levels in a texture"
+			    },
+			    {
+			      "parameters": {
+			        "name": "sampler1DShadow sampler"
+			      },
+			      "returnValue": "vec2",
+			      "description": "[4.30] Returns the number of accessible mipmap levels in a texture"
+			    },
+			    {
+			      "parameters": {
+			        "name": "gsampler1DArray sampler"
+			      },
+			      "returnValue": "vec2",
+			      "description": "[4.30] Returns the number of accessible mipmap levels in a texture"
+			    },
+			    {
+			      "parameters": {
+			        "name": "gsampler1DArrayShadow sampler"
+			      },
+			      "returnValue": "vec2",
+			      "description": "[4.30] Returns the number of accessible mipmap levels in a texture"
+			    },
+			    {
+			      "parameters": {
+			        "name": "gsampler2D sampler"
+			      },
+			      "returnValue": "vec2",
+			      "description": "[4.30] Returns the number of accessible mipmap levels in a texture"
+			    },
+			    {
+			      "parameters": {
+			        "name": "sampler2DShadow sampler"
+			      },
+			      "returnValue": "vec2",
+			      "description": "[4.30] Returns the number of accessible mipmap levels in a texture"
+			    },
+			    {
+			      "parameters": {
+			        "name": "gsampler2DArray sampler"
+			      },
+			      "returnValue": "vec2",
+			      "description": "[4.30] Returns the number of accessible mipmap levels in a texture"
+			    },
+			    {
+			      "parameters": {
+			        "name": "gsampler2DShadow sampler"
+			      },
+			      "returnValue": "vec2",
+			      "description": "[4.30] Returns the number of accessible mipmap levels in a texture"
+			    },
+			    {
+			      "parameters": {
+			        "name": "gsampler3D sampler"
+			      },
+			      "returnValue": "vec2",
+			      "description": "[4.30] Returns the number of accessible mipmap levels in a texture"
+			    },
+			    {
+			      "parameters": {
+			        "name": "gsamplerCube sampler"
+			      },
+			      "returnValue": "vec2",
+			      "description": "[4.30] Returns the number of accessible mipmap levels in a texture"
+			    },
+			    {
+			      "parameters": {
+			        "name": "gsamplerCubeShadow sampler"
+			      },
+			      "returnValue": "vec2",
+			      "description": "[4.30] Returns the number of accessible mipmap levels in a texture"
+			    },
+			    {
+			      "parameters": {
+			        "name": "gsamplerCubeArray sampler"
+			      },
+			      "returnValue": "vec2",
+			      "description": "[4.30] Returns the number of accessible mipmap levels in a texture"
+			    },
+			    {
+			      "parameters": {
+			        "name": "gsamplerCubeArrayShadow sampler"
+			      },
+			      "returnValue": "vec2",
+			      "description": "[4.30] Returns the number of accessible mipmap levels in a texture"
+			    }
+			  ],
+			  "name": "textureQueryLevels",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "float P"
+			        }
+			      ],
+			      "returnValue": "vec2",
+			      "description": "[4.00] Returns the level of detail that would be used to sample from the texture; P indicates texture coordinates"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DShadow sampler"
+			        },
+			        {
+			          "name": "float P"
+			        }
+			      ],
+			      "returnValue": "vec2",
+			      "description": "[4.00] Returns the level of detail that would be used to sample from the texture; P indicates texture coordinates"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1DArray sampler"
+			        },
+			        {
+			          "name": "float P"
+			        }
+			      ],
+			      "returnValue": "vec2",
+			      "description": "[4.00] Returns the level of detail that would be used to sample from the texture; P indicates texture coordinates"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1DArrayShadow sampler"
+			        },
+			        {
+			          "name": "float P"
+			        }
+			      ],
+			      "returnValue": "vec2",
+			      "description": "[4.00] Returns the level of detail that would be used to sample from the texture; P indicates texture coordinates"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        }
+			      ],
+			      "returnValue": "vec2",
+			      "description": "[4.00] Returns the level of detail that would be used to sample from the texture; P indicates texture coordinates"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        }
+			      ],
+			      "returnValue": "vec2",
+			      "description": "[4.00] Returns the level of detail that would be used to sample from the texture; P indicates texture coordinates"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArray sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        }
+			      ],
+			      "returnValue": "vec2",
+			      "description": "[4.00] Returns the level of detail that would be used to sample from the texture; P indicates texture coordinates"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DShadow sampler"
+			        },
+			        {
+			          "name": "vec2 P"
+			        }
+			      ],
+			      "returnValue": "vec2",
+			      "description": "[4.00] Returns the level of detail that would be used to sample from the texture; P indicates texture coordinates"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        }
+			      ],
+			      "returnValue": "vec2",
+			      "description": "[4.00] Returns the level of detail that would be used to sample from the texture; P indicates texture coordinates"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCube sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        }
+			      ],
+			      "returnValue": "vec2",
+			      "description": "[4.00] Returns the level of detail that would be used to sample from the texture; P indicates texture coordinates"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCubeShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        }
+			      ],
+			      "returnValue": "vec2",
+			      "description": "[4.00] Returns the level of detail that would be used to sample from the texture; P indicates texture coordinates"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCubeArray sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        }
+			      ],
+			      "returnValue": "vec2",
+			      "description": "[4.00] Returns the level of detail that would be used to sample from the texture; P indicates texture coordinates"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCubeArrayShadow sampler"
+			        },
+			        {
+			          "name": "vec3 P"
+			        }
+			      ],
+			      "returnValue": "vec2",
+			      "description": "[4.00] Returns the level of detail that would be used to sample from the texture; P indicates texture coordinates"
+			    }
+			  ],
+			  "name": "textureQueryLod",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1D sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "int",
+			      "description": "[1.30] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler1DShadow sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "int",
+			      "description": "[1.30] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1DArray sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "int",
+			      "description": "[1.30] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler1DArrayShadow sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "int",
+			      "description": "[1.30] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2D sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "ivec2",
+			      "description": "[1.30] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "sampler2DShadow sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "ivec2",
+			      "description": "[1.30] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DArray sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "ivec2",
+			      "description": "[1.30] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DShadow sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "ivec2",
+			      "description": "[1.30] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler3D sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "ivec3",
+			      "description": "[1.30] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCube sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "ivec2",
+			      "description": "[4.00] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCubeShadow sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "ivec2",
+			      "description": "[4.00] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCubeArray sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "ivec2",
+			      "description": "[4.00] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerCubeArrayShadow sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "ivec2",
+			      "description": "[4.00] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerRect sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "ivec2",
+			      "description": "[1.40] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerRectShadow sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "ivec2",
+			      "description": "[1.40] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsamplerBuffer sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "int",
+			      "description": "[1.40] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DMS sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "ivec2",
+			      "description": "[1.50?] Returns the dimensions of a texture's level"
+			    },
+			    {
+			      "parameters": [
+			        {
+			          "name": "gsampler2DMSArray sampler"
+			        },
+			        {
+			          "name": "int lod"
+			        }
+			      ],
+			      "returnValue": "ivec3",
+			      "description": "[1.50?] Returns the dimensions of a texture's level"
+			    }
+			  ],
+			  "name": "textureSize",
+			  "category": "function"
+			},
+			{
+			  "overload": [
+			    {
+			      "parameters": {
+			        "name": "mat2/dmat2 m"
+			      },
+			      "returnValue": "mat2/dmat2",
+			      "description": "[1.20/4.00] Returns the transpose of matrix m"
+			    },
+			    {
+			      "parameters": {
+			        "name": "mat3/dmat3 m"
+			      },
+			      "returnValue": "mat3/dmat3",
+			      "description": "[1.20/4.00] Returns the transpose of matrix m"
+			    },
+			    {
+			      "parameters": {
+			        "name": "mat4/dmat4 m"
+			      },
+			      "returnValue": "mat4/dmat4",
+			      "description": "[1.20/4.00] Returns the transpose of matrix m"
+			    },
+			    {
+			      "parameters": {
+			        "name": "mat3x2/dmat3x2 m"
+			      },
+			      "returnValue": "mat2x3/dmat2x3",
+			      "description": "[1.20/4.00] Returns the transpose of matrix m"
+			    },
+			    {
+			      "parameters": {
+			        "name": "mat4x2/dmat4x2 m"
+			      },
+			      "returnValue": "mat2x4/dmat2x4",
+			      "description": "[1.20/4.00] Returns the transpose of matrix m"
+			    },
+			    {
+			      "parameters": {
+			        "name": "mat2x3/dmat2x3 m"
+			      },
+			      "returnValue": "mat3x2/dmat3x2",
+			      "description": "[1.20/4.00] Returns the transpose of matrix m"
+			    },
+			    {
+			      "parameters": {
+			        "name": "mat4x3/dmat4x3 m"
+			      },
+			      "returnValue": "mat3x4/dmat3x4",
+			      "description": "[1.20/4.00] Returns the transpose of matrix m"
+			    },
+			    {
+			      "parameters": {
+			        "name": "mat2x4/dmat2x4 m"
+			      },
+			      "returnValue": "mat4x2/dmat4x2",
+			      "description": "[1.20/4.00] Returns the transpose of matrix m"
+			    },
+			    {
+			      "parameters": {
+			        "name": "mat3x4/dmat3x4 m"
+			      },
+			      "returnValue": "mat4x3/dmat4x3",
+			      "description": "[1.20/4.00] Returns the transpose of matrix m"
+			    }
+			  ],
+			  "name": "transpose",
+			  "category": "function"
+			},
+			{
+			  "name": "true"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genType v"
+			    },
+			    "returnValue": "genType",
+			    "description": "[1.30/4.00] Truncates v to the nearest integer that is less than or equal to it"
+			  },
+			  "name": "trunc",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genUType x"
+			      },
+			      {
+			        "name": "genUType y"
+			      },
+			      {
+			        "name": "out genUType carry"
+			      }
+			    ],
+			    "returnValue": "genUType",
+			    "description": "[4.00] Adds unsigned integers x and y and returns the carry"
+			  },
+			  "name": "uaddCarry",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "genIType/genUType v"
+			    },
+			    "returnValue": "genType",
+			    "description": "[3.30] Returns v's unsigned integer bit representation as a float"
+			  },
+			  "name": "uintBitsToFloat",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genUType x"
+			      },
+			      {
+			        "name": "genUType y"
+			      },
+			      {
+			        "name": "out genUType msb"
+			      },
+			      {
+			        "name": "out genUType lsb"
+			      }
+			    ],
+			    "returnValue": "void",
+			    "description": "[4.00] Multiplies 32-bit unsigned x and y into a 64-bit result; returns it in msb and lsb"
+			  },
+			  "name": "umulExtended",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "double v"
+			    },
+			    "returnValue": "uvec2",
+			    "description": "[4.00] Unpacks a double-precision number into two unsigned integers"
+			  },
+			  "name": "unpackDouble2x32",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "uint v"
+			    },
+			    "returnValue": "vec2",
+			    "description": "[4.20] Unpacks an unsigned integer into two half-precision (16-bit) floats"
+			  },
+			  "name": "unpackHalf2x16",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "uint v"
+			    },
+			    "returnValue": "vec2",
+			    "description": "[4.20] Unpacks an unsigned integer into two half-precision (16-bit) signed integers"
+			  },
+			  "name": "unpackSnorm2x16",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "uint v"
+			    },
+			    "returnValue": "vec4",
+			    "description": "[4.10] Unpacks an unsigned integer into four 8-bit signed integers"
+			  },
+			  "name": "unpackSnorm4x8",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "uint v"
+			    },
+			    "returnValue": "vec2",
+			    "description": "[4.10] Unpacks an unsigned integer into two half-precision (16-bit) unsigned integers"
+			  },
+			  "name": "unpackUnorm2x16",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": {
+			      "name": "uint v"
+			    },
+			    "returnValue": "vec4",
+			    "description": "[4.10] Unpacks an unsigned integer into four 8-bit unsigned integers"
+			  },
+			  "name": "unpackUnorm4x8",
+			  "category": "function"
+			},
+			{
+			  "overload": {
+			    "parameters": [
+			      {
+			        "name": "genUType x"
+			      },
+			      {
+			        "name": "genUType y"
+			      },
+			      {
+			        "name": "out genUType borrow"
+			      }
+			    ],
+			    "returnValue": "genUType",
+			    "description": "[4.00] Subtracts unsigned integers x and y and returns the borrow"
+			  },
+			  "name": "usubBorrow",
+			  "category": "function"
+			},
+			{
+			  "name": "vec2"
+			},
+			{
+			  "name": "vec3"
+			},
+			{
+			  "name": "vec4"
+			},
+			{
+			  "name": "void"
+			},
+			{
+			  "name": "while"
+			}
+		]
+	}
+}
