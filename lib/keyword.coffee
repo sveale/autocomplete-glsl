@@ -2,7 +2,7 @@ Overload = require './overload'
 
 module.exports =
   class Keyword
-    constructor: ({@word, @name, @category, overload}) ->
+    constructor: ({@name, @category, overload}) ->
       if overload?
         @overloads = []
         if overload not instanceof Array

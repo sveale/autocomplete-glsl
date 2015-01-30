@@ -28,7 +28,7 @@ module.exports =
       results = fuzzaldrin.filter(keywords, prefix, key: 'name')
       suggestions = for result in results
         suggestion =
-          word: result.word
+          word: result.name
           prefix: prefix
           label: result.category
 
@@ -45,15 +45,7 @@ module.exports =
         for item in JSON.parse(data)
           console.debug "\"#{item.name}\" has no category!" if not item.category
           keyword = new Keyword(item)
-
-          if keyword.category is "function"
-            for overload in keyword.overloads
-              word = "#{overload.returnValue} #{keyword.name}(#{overload.parameters})"
-              exKeyword = new Keyword({word: word, name: keyword.name, category: keyword.category})
-              tmpKeywords.push(exKeyword)
-          else
-            keyword.word = keyword.name
-            tmpKeywords.push(keyword)
+          tmpKeywords.push(keyword)
         keywords.resolve(tmpKeywords)
         )
       )
