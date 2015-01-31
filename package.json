@@ -3,8 +3,18 @@
   "main": "./lib/autocomplete-glsl",
   "version": "0.0.0",
   "description": "A short description of your package",
-  "repository": "https://github.com/atom/autocomplete-glsl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sveale/autocomplete-glsl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sveale/autocomplete-glsl/issues"
+  },
   "license": "MIT",
+  "author": {
+    "name": "Sverre Aleksandersen",
+    "email": "sverre.aleksandersen@gmail.com"
+  },
   "engines": {
     "atom": ">0.50.0"
   },
@@ -12,5 +22,12 @@
     "fs-plus": ">=2.2.3",
     "q": ">=1.0.1",
     "fuzzaldrin": ">=1.0.0"
-  }
+  },
+  "keywords": [
+    "glsl",
+    "opengl",
+    "autocomplete",
+    "atom",
+    "shader"
+  ]
 }
