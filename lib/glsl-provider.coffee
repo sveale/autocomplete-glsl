@@ -12,7 +12,15 @@ module.exports =
     id: 'autocomplete-glsl-glslprovider'
     selector: '.glsl,.vs,.fs,.gs,.tc,.te,.vert,.frag'
     blacklist: '.glsl .comment,.vs .comment,.fs .comment,.gs .comment,.tc .comment,.te .comment,.vert .comment,.frag .comment'
-    categories: ["preprocessor", "function", "type", "qualifier", "statement", "variable"]
+    categories:
+      preprocessor: {color: "#316782"}
+      function: {color: "#1f6699"}
+      type: {color: "#61fab5"}
+      qualifier: {color: "#8e8685"}
+      statement: {color: "#1cde3e"}
+      variable: {color: "#5f83aa"}
+      keywords: {color: "#73edca"}
+      identifiers: {color: "#ea71d4"}
 
     requestHandler: (options) ->
       @keywords ?= @loadKeywords()
@@ -30,7 +38,8 @@ module.exports =
         suggestion =
           word: result.name
           prefix: prefix
-          label: result.category
+          label: "<span style=\"color: #{@categories[result.category].color}\">#{result.category}</span>"
+          renderLabelAsHtml: true
 
 
     loadKeywords: ->
