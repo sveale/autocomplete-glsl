@@ -2,7 +2,7 @@
   "name": "autocomplete-glsl",
   "main": "./lib/autocomplete-glsl",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "Adds GLSL autocompletion to autocomplete+",
   "repository": {
     "type": "git",
     "url": "https://github.com/sveale/autocomplete-glsl.git"

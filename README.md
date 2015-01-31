@@ -1,5 +1,7 @@
-# autocomplete-glsl package
+# atom autocomplete+ glsl suggestions
 
-A short description of your package.
+Adds glsl completion to [autocomplete+](https://atom.io/packages/autocomplete-plus).
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+![Imgur](http://i.imgur.com/aoW4bWq.gifv)
+
+Thanks to _irreversible_ at [gamedev.net](http://www.gamedev.net/topic/660918-ever-needed-glsl-hilightingautocomplete-in-notepad-try-this/) for compiling an awesome list which this plugin is based on.
