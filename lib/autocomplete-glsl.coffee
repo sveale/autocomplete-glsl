@@ -5,7 +5,7 @@ module.exports =
   activate: ->
     GlslProvider = require('./glsl-provider')
     @glslProvider = new GlslProvider()
-    @registration = atom.services.provide('autocomplete.provider', '1.0.0', {provider: @glslProvider})
+    @registration = atom.packages.serviceHub.provide('autocomplete.provider', '1.0.0', {provider: @glslProvider})
 
   deactivate: ->
     @registration?.dispose()
