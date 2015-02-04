@@ -5,13 +5,32 @@ module.exports =
     constructor: (@name, @category, @description, @parameters, @returnValue) ->
       super(@name, @category)
 
-    getSignature: ->
-      "#{@returnValue} #{@name}(#{@getParameters()})"
+
+    getSimpleSignature: ->
+      "(#{@returnValue}) (#{@getSimpleParameters()})"
+
+    getMediumSignature: ->
+      "#{@returnValue} #{@name}(#{@getSimpleParameters()})"
+
+    getFullSignature: ->
+      "#{@returnValue} #{@name}(#{@getFullParameters()})"
 
     getSnippet: ->
       null
 
-    getParameters: ->
+    getSimpleParameters: ->
+      if @parameters not instanceof Array
+        return @parameters.name.split(" ")[0]
+      else
+        params = ""
+        for parameter, index in @parameters
+          if index is 0
+            params += "#{parameter.name.split(" ")[0]}"
+          else if index < @parameters.length
+            params += ", #{parameter.name.split(" ")[0]}"
+        return params
+
+    getFullParameters: ->
       if @parameters not instanceof Array
         return @parameters.name
       else
