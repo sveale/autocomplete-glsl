@@ -42,9 +42,6 @@ module.exports =
           label: "<span style=\"color: #{@categories[result.category].color}\">#{result.category}</span>"
           renderLabelAsHtml: true
 
-        if result instanceof Function
-          suggestion.word = result.getMediumSignature()
-
         suggestion
 
 
