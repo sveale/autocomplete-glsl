@@ -1,7 +1,7 @@
 {
   "name": "autocomplete-glsl",
   "main": "./lib/autocomplete-glsl",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Adds GLSL autocompletion to autocomplete+",
   "repository": {
     "type": "git",
