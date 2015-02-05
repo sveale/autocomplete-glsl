@@ -1,14 +1,18 @@
 module.exports =
-  registration: null
-  glslProvider: null
+  provider: null
+  ready: false
 
   activate: ->
-    GlslProvider = require('./glsl-provider')
-    @glslProvider = new GlslProvider()
-    @registration = atom.packages.serviceHub.provide('autocomplete.provider', '1.0.0', {provider: @glslProvider})
+    @ready = true
 
   deactivate: ->
-    @registration?.dispose()
-    @registration = null
-    @glslProvider?.dispose()
-    @glslProvider = null
+    @provider = null
+
+  getProvider: ->
+    return @provider if @provider?
+    GlslProvider = require './glsl-provider'
+    @provider = new GlslProvider()
+    return @provider
+
+  provide: ->
+    return {provider: @getProvider()}

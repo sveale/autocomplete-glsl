@@ -29,5 +29,12 @@
     "autocomplete",
     "atom",
     "shader"
-  ]
+  ],
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "1.0.0": "provide"
+      }
+    }
+  }
 }
