@@ -3,9 +3,7 @@ Keyword = require './keyword'
 Function = require './function'
 {Range}  = require 'atom'
 fuzzaldrin = require 'fuzzaldrin'
-
-# Deferred
-fs = null
+fs = require 'fs-plus'
 
 
 module.exports =
@@ -48,9 +46,7 @@ module.exports =
 
     loadKeywords: ->
       keywords = Q.defer()
-      fs = require 'fs-plus'
       packagePath = atom.packages.resolvePackagePath('autocomplete-glsl')
-      fs ?= require 'fs-plus'
       fs.readFile("#{packagePath}/data/glsl430-mini.json", 'utf8', ((err, data) =>
         throw err if err?
         tmpKeywords = []
