@@ -35,13 +35,20 @@ module.exports =
       return [] unless keywords? and prefix?
       results = fuzzaldrin.filter(keywords, prefix, key: 'name')
       suggestions = for result in results
-        suggestion =
-          text: result.name
-          replacementPrefix: prefix
-          rightLabelHTML: "<span style=\"color: #{@categories[result.category].color}\">#{result.category}</span>"
-          type: 'function'
-
-        suggestion
+        if result instanceof Function
+          suggestion =
+            replacementPrefix: prefix
+            # !! IMPORTANT !! to still set text even though we're using snippets because it's used for fuzzy find
+            text: result.name
+            snippet: result.getSnippet()
+            rightLabelHTML: "<span style=\"color: #{@categories[result.category].color}\">#{result.returnValue}</span>"
+            type: "#{result.category}"
+        else
+          suggestion =
+            text: result.name
+            rightLabelHTML: "<span style=\"color: #{@categories[result.category].color}\">#{result.category}</span>"
+            type: "#{result.category}"
+            replacementPrefix: prefix
 
 
     loadKeywords: ->

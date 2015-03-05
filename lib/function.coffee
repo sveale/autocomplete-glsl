@@ -16,7 +16,24 @@ module.exports =
       "#{@returnValue} #{@name}(#{@getFullParameters()})"
 
     getSnippet: ->
-      null
+      "#{@name}#{@getSnippetParameters()}"
+
+    getSnippetParameters: ->
+      if @parameters is undefined
+        return "()"
+      else if @parameters not instanceof Array
+        return "(${1:#{@parameters.name}})"
+      else
+        toReturn = "("
+        counter = 0
+        for parameter in @parameters
+          toReturn += "${#{++counter}:#{parameter.name}}"
+          if counter is @parameters.length
+            toReturn += ")"
+          else
+            toReturn += ", "
+        toReturn
+
 
     getSimpleParameters: ->
       if @parameters not instanceof Array
