@@ -14,6 +14,11 @@ out VS_OUT
     vec3 normal;
 } vs_out;
 
+vec3 thisIsAFunction()
+{
+  return vec3(1, 1, 1);
+}
+
 void main() {
     vs_out.diffuse = diffuse;
     vs_out.position = position;

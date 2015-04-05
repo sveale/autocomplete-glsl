@@ -45,6 +45,7 @@ module.exports =
             type: "#{result.category}"
             leftLabel: "#{result.returnValue}"
             rightLabel: "#{result.category}"
+            description: "#{result.description}"
         else
           suggestion =
             text: result.name
