@@ -43,12 +43,15 @@ module.exports =
             snippet: result.getSnippet()
             rightLabelHTML: "<span style=\"color: #{@categories[result.category].color}\">#{result.returnValue}</span>"
             type: "#{result.category}"
+            leftLabel: "#{result.returnValue}"
+            rightLabel: "#{result.category}"
         else
           suggestion =
             text: result.name
             rightLabelHTML: "<span style=\"color: #{@categories[result.category].color}\">#{result.category}</span>"
             type: "#{result.category}"
             replacementPrefix: prefix
+            rightLabel: "#{result.category}"
 
 
     loadKeywords: ->
