@@ -41,10 +41,9 @@ module.exports =
             # !! IMPORTANT !! to still set text even though we're using snippets because it's used for fuzzy find
             text: result.name
             snippet: result.getSnippet()
-            rightLabelHTML: "<span style=\"color: #{@categories[result.category].color}\">#{result.returnValue}</span>"
+            rightLabelHTML: "<span style=\"color: #{@categories[result.category].color}\">#{result.category}</span>"
             type: "#{result.category}"
             leftLabel: "#{result.returnValue}"
-            rightLabel: "#{result.category}"
             description: "#{result.description}"
         else
           suggestion =
