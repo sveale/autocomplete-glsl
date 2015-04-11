@@ -9,7 +9,6 @@ fs = require 'fs-plus'
 module.exports =
   class GlslProvider
     selector: '.glsl, .vs, .fs, .gs, .tc, tcs, .te, .tes, .vert, .frag'
-    id: 'autocomplete-glsl-glslprovider'
     inclusionPriority: 10
     excludeLowerPriority: false
     categories:
