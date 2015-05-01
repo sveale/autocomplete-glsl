@@ -37,20 +37,16 @@ module.exports =
         if result instanceof Function
           suggestion =
             replacementPrefix: prefix
-            # !! IMPORTANT !! to still set text even though we're using snippets because it's used for fuzzy find
-            text: result.name
             snippet: result.getSnippet()
-            rightLabelHTML: "<span style=\"color: #{@categories[result.category].color}\">#{result.category}</span>"
             type: "#{result.category}"
             leftLabel: "#{result.returnValue}"
             description: "#{result.description}"
+            descriptionMoreURL: "https://www.opengl.org/sdk/docs/man/html/#{result.name}.xhtml"
         else
           suggestion =
             text: result.name
-            rightLabelHTML: "<span style=\"color: #{@categories[result.category].color}\">#{result.category}</span>"
             type: "#{result.category}"
             replacementPrefix: prefix
-            rightLabel: "#{result.category}"
 
 
     loadKeywords: ->
