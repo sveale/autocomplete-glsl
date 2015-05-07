@@ -1,9 +1,8 @@
-Q = require 'q'
-Keyword = require './keyword'
-Function = require './function'
-{Range}  = require 'atom'
-fuzzaldrin = require 'fuzzaldrin'
-fs = require 'fs-plus'
+Q = null
+Keyword = null
+Function = null
+Fuzzaldrin = null
+fs = null
 
 
 module.exports =
@@ -32,7 +31,10 @@ module.exports =
 
     findSuggestionsForWord: (keywords, prefix) ->
       return [] unless keywords? and prefix?
-      results = fuzzaldrin.filter(keywords, prefix, key: 'name')
+
+      Fuzzaldrin ?= require 'fuzzaldrin'
+
+      results = Fuzzaldrin.filter(keywords, prefix, key: 'name')
       suggestions = for result in results
         if result instanceof Function
           suggestion =
@@ -50,8 +52,10 @@ module.exports =
 
 
     loadKeywords: ->
+      Q ?= require 'q'
       keywords = Q.defer()
       packagePath = atom.packages.resolvePackagePath('autocomplete-glsl')
+      fs ?= require 'fs-plus'
       fs.readFile("#{packagePath}/data/glsl430-mini.json", 'utf8', ((err, data) =>
         throw err if err?
         tmpKeywords = []
@@ -59,6 +63,9 @@ module.exports =
         for item in JSON.parse(data)
           console.error item + " has no category!" if not item.category
           console.error item + " has no name!" if not item.name
+
+          Keyword ?= require './keyword'
+          Function ?= require './function'
 
           if item.category is @categories.function.name
             if item.overload not instanceof Array
